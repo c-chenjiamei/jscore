@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pay(  ){
+            console.log(arguments);
+           if(arguments.length==0){//说明没传入任何实参值
+               console.log("手机支付。。。。");
+           }else if(arguments.length==1){//说明只传入一个实参值
+               console.log(`现金支付。。。，收您:${arguments[0]}元现金`);
+           }else{
+            console.log(`刷卡支付。。。从你的卡号:${arguments[0]}中扣款成功`)
+           }
+        }
+    //将来调用时: 
+    pay();//手机支付
+    pay(100);//现金支付
+    pay("6553 1234","123456")//刷卡支付    
+    </script>
+</body>
+</html>
